@@ -1,0 +1,22 @@
+nav {
+  padding: 10px; /* Ajoute un peu de padding */
+}
+
+nav ul {
+  list-style: none; /* Supprime les puces */
+  padding: 0; /* Supprime le padding par défaut */
+  display: flex; /* Utilisation de flex pour aligner horizontalement */
+}
+
+nav li {
+  margin: 0 15px; /* Espace entre les éléments */
+}
+
+nav a {
+  text-decoration: none; /* Supprime le soulignement */
+  color: #007BFF; /* Couleur du texte */
+}
+
+nav a:hover {
+  text-decoration: underline; /* Ajoute un soulignement au survol */
+}

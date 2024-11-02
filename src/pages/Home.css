@@ -1,0 +1,57 @@
+/* src/pages/Home.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #282c34;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  padding-top: 60px;
+  text-align: center;
+}
+
+#mission {
+  background-color: #444;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 8px;
+}
+
+#mission p {
+  line-height: 1.6;
+}
+
+/* Animation pour le fade-in */
+.fade-in {
+  opacity: 0; /* Commence invisible */
+  transition: opacity 1s ease-in-out; /* Durée de la transition */
+}
+
+.fade-in span {
+  opacity: 1; /* Rendre visible avec le texte mis à jour */
+  transition: opacity 1s ease-in-out; /* Durée de la transition */
+}
+
+.fade-in {
+  opacity: 1; /* Rendre visible le texte complet après la première partie */
+}
+
+/* Animation pour le texte qui devient visible */
+.highlight {
+  animation: highlight 1s ease-in-out forwards; /* Animation pour le texte surligné */
+}
+
+@keyframes highlight {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}

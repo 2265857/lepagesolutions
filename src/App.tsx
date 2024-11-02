@@ -1,26 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Menu from './Menu'; // Assurez-vous d'importer Menu
+import Home from './pages/Home'; // Importez le nouveau composant
+import Mission from './pages/Mission';
+import ProgrammationWEBAvancee from './pages/ProgrammationWEBAvancee';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App: React.FC = () => {
+    return (
+        <Router>
+            <Menu /> {/* Ajoutez le menu ici */}
+            <Routes>
+            <Route path="/" element={<Home />} /> {/* Utilisez le nouveau composant ici */}
+                <Route path="/" element={<div>Accueil</div>} /> {/* Exemple d'élément pour la page d'accueil */}
+                <Route path="/ProgrammationWEBAvancee" element={<ProgrammationWEBAvancee />} />
+                <Route path="/mission" element={<Mission />} />
+                {/* <Route path="/mission" element={<Mission />} /> */}
+            </Routes>
+        </Router>
+    );
+};
 
 export default App;
